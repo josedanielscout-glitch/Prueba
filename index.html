@@ -9,16 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300..900;1,300..900&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         /* Tipografía y Colores Base */
-        body { 
-            font-family: 'Crimson Pro', serif; 
-            background-color: #fffbf5; /* Crema más cálido */
-            color: #1c1917; 
-            /* Fondo más creativo con toques de los colores temáticos (Ámbar y Azul Espiritual) */
-            background-image: 
-                radial-gradient(circle at 5% 10%, rgba(217, 119, 6, 0.08) 0%, transparent 30%),
-                radial-gradient(circle at 95% 90%, rgba(2, 128, 174, 0.06) 0%, transparent 30%),
-                radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.02) 0%, transparent 60%);
-        }
+        body {
+    font-family: 'Crimson Pro', serif;
+    color: #1c1917;
+    margin: 0;
+    padding: 0;
+    
+    /* Fondo con un crema aún más suave y sutil */
+    background: linear-gradient(135deg, #fffbf5, #fcf6eb, #fffbf5);
+    background-size: 400% 400%;
+    
+    /* Animación de movimiento suave */
+    animation: gradientMovement 15s ease infinite;
+}
+
+/* Definición del movimiento del fondo */
+@keyframes gradientMovement {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
         
         .font-sans { font-family: 'Inter', sans-serif; }
         
