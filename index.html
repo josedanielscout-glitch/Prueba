@@ -19,25 +19,28 @@ body {
     font-family: 'Crimson Pro', serif;
     color: #1c1917;
     margin: 0;
-    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
-
-    /* Degradado dinámico con los colores temáticos en versión suave */
-    background: linear-gradient(-45deg, #fffbf5, #fcebc9, #e0f2f7, #fffbf5);
-    background-size: 400% 400%;
+    min-height: 100vh;
+    background-color: #fffbf5; /* Color base */
     
-    /* Animación más fluida */
-    animation: flowBackground 10s ease-in-out infinite;
+    /* Creamos tres "nubes" de color con degradados radiales */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(2, 128, 174, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(252, 235, 201, 0.15) 0%, transparent 60%);
+    
+    background-size: 200% 200%;
+    animation: cloudMovement 20s ease-in-out infinite alternate;
 }
 
-@keyframes flowBackground {
+@keyframes cloudMovement {
     0% {
-        background-position: 0% 50%;
+        background-position: 0% 0%;
     }
     50% {
-        background-position: 100% 50%;
+        background-position: 50% 100%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 100% 0%;
     }
 }
         
