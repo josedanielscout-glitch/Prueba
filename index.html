@@ -15,16 +15,21 @@
     margin: 0;
     padding: 0;
     
-    /* Fondo con un crema aún más suave y sutil */
-    background: linear-gradient(135deg, #fffbf5, #fcf6eb, #fffbf5);
+body {
+    font-family: 'Crimson Pro', serif;
+    color: #1c1917;
+    margin: 0;
+    min-height: 100vh; /* Asegura que el fondo cubra toda la pantalla */
+
+    /* Degradado dinámico con los colores temáticos en versión suave */
+    background: linear-gradient(-45deg, #fffbf5, #fcebc9, #e0f2f7, #fffbf5);
     background-size: 400% 400%;
     
-    /* Animación de movimiento suave */
-    animation: gradientMovement 15s ease infinite;
+    /* Animación más fluida */
+    animation: flowBackground 10s ease-in-out infinite;
 }
 
-/* Definición del movimiento del fondo */
-@keyframes gradientMovement {
+@keyframes flowBackground {
     0% {
         background-position: 0% 50%;
     }
